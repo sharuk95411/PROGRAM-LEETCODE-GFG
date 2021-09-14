@@ -1,0 +1,2 @@
+Important Streatry About LinkedList
+// 80 % Linked List k Question me Dummy node ya Two Pointer Approach use hgi pr Both ek sath use hgi 
