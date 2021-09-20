@@ -1,2 +1,4 @@
 Important Streatry About LinkedList
-// 80 % Linked List k Question me Dummy node ya Two Pointer Approach use hgi pr Both ek sath use hgi 
+// 80 % Linked List k Question me Dummy node ya Two Pointer Approach use hgi or Both ek sath use ho skti h
+// Iske Question me pointers ka main khel h ki pointers ko kis trh chalana h and kitne lne h mne abhi tk max 3 pointers use kiye h jo ki reverse of LL
+and aur b kai Ques me use hua h 
