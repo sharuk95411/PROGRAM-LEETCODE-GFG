@@ -5,7 +5,7 @@ TC  O(nlogK) i dont know where is come K
         int n = A.length, i = 0;
         if (n % 2 == 1) return new int[0];
         int[] res = new int[n / 2];
-        Map<Integer, Integer> count = new TreeMap<>();
+        Map<Integer, Integer> count = new TreeMap<>(); // isme value sorted form me store hti h key k bases pr 
         for (int a : A)
             count.put(a, count.getOrDefault(a, 0) + 1);
         for (int x : count.keySet()) {
