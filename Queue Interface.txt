@@ -1,5 +1,0 @@
-// Queue interface ko kai trh se implement kr skte h
-1-With the help of LinkedList.
-2-With the help of ArrayDequeue
-and so onn--- Now Ab Queue Interface jis class ko use krta h wo us class k sare method use kr skte h Like in ArrayDequeue or LinkedList so ye
-yd rkhna and iske according queue interface ko implement krna ki kis class k sath usko use krna h .

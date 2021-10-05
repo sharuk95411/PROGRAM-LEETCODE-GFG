@@ -1,0 +1,3 @@
+// Queue interface ko kai trh se implement kr skte h
+1-With the help of LinkedList.
+2-With the help of ArrayDequeue
