@@ -15,3 +15,14 @@ int i=Integer.parseInt("200");
 int a= 123;
 char [] chars = String.valueOf(a).toCharArray();
 8== Convert int to char ye javapoint se dekh lena kai variation btaye h wha pr
+9== isme Hme String di h and hme use each charcter ki freq k base pr asc order me sort krna h to wo hmne kia h phle hashamp se freq nikal li h then age ye kia h and ye
+yd rkhna importanat h
+PriorityQueue<Map.Entry<Character,Integer>>pq= new PriorityQueue<>( (a,b) -> b.getValue()-a.getValue());
+for(Map.Entry<Character, Integer> entry: h.entrySet()) h is Object of HashMap
+        {
+            pq.offer(entry);
+            
+        }
+System.out.println(pq.peek().getKey());
+System.out.println(pq.peek().getValue());
+10== 
