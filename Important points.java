@@ -25,4 +25,5 @@ for(Map.Entry<Character, Integer> entry: h.entrySet()) h is Object of HashMap
         }
 System.out.println(pq.peek().getKey());
 System.out.println(pq.peek().getValue());
-10== 
+10==  Traverse the HashMap 
+11==
