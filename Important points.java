@@ -26,4 +26,4 @@ for(Map.Entry<Character, Integer> entry: h.entrySet()) h is Object of HashMap
 System.out.println(pq.peek().getKey());
 System.out.println(pq.peek().getValue());
 10==  Traverse the HashMap 
-11==
+11== LinkedHashMap and sare Collections pdh lena ek bar ache se
