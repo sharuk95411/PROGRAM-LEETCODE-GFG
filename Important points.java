@@ -25,5 +25,11 @@ for(Map.Entry<Character, Integer> entry: h.entrySet()) h is Object of HashMap
         }
 System.out.println(pq.peek().getKey());
 System.out.println(pq.peek().getValue());
+// Reorganize String ye ques leetcode pr h usme b PQ ka freq k base pr bht acha use hua h so use b dhyn rkhna
 10==  Traverse the HashMap 
 11== LinkedHashMap and sare Collections pdh lena ek bar ache se
+12== HashMap me data Key k base pr sort hokr save hta h chahe wo key character type ki ho ya int type ki
+13== Sort the 2D-Array on the based on any specic column
+Arrays.sort(arr, (a, b) -> a[1] - b[1]);
+14== Make Priority Queue array type and sort thr value on the bases on any index 
+   PriorityQueue<int[]> queue = new PriorityQueue<int[]>((a, b) -> a[0] - b[0]);

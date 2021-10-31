@@ -1,23 +1,49 @@
- // Is questionn ka Logic smjh ni aya h algo smjh a ri h and ye best solution h so isi se smjhna
-    public int maxProduct(int[] a) {
-        if (a == null || a.length == 0)
-    return 0;
-
-  int ans = a[0], min = ans, max = ans;
-  
-  for (int i = 1; i < a.length; i++) {
-    if (a[i] >= 0) {
-      max = Math.max(a[i], max * a[i]);
-      min = Math.min(a[i], min * a[i]);
-    } else {
-      int tmp = max;
-      max = Math.max(a[i], min * a[i]);
-      min = Math.min(a[i], tmp * a[i]);
-    }
-    
-    ans = Math.max(ans, max);
-  }
-  
-  return ans;
+/* Brute Force Generate All possible set TC O(n2)
+ public int maxProduct(int[] arr) {
         
-    }
+        
+    int ans=Integer.MIN_VALUE;
+        int temp=1;
+        
+        for(int i=0;i<arr.length;i++)
+        {
+            for(int j=i;j<arr.length;j++)
+            {
+                temp= temp*arr[j];
+                ans= Math.max(ans,temp);
+            }
+        
+            temp=1;
+        }
+            return ans;
+    }  
+*/
+ Optimal O(n) Logic- Code Library
+public int maxProduct(int[] nums) {
+     
+        
+        int max= nums[0];
+        int min= nums[0];
+        int ans= nums[0];
+        
+        for(int i=1;i<nums.length;i++)
+        {
+            if(nums[i]<0)
+            {
+                int temp= max;
+                max= min;
+                min= temp;
+                max= Math.max(nums[i],nums[i]*max);
+                min= Math.min(nums[i],nums[i]*min);
+                ans= Math.max(max,ans);
+            }
+            else
+            {
+             
+                 max= Math.max(nums[i],nums[i]*max);
+                min= Math.min(nums[i],nums[i]*min);
+                ans= Math.max(max,ans);
+            }
+        }
+        return ans;
+    } 
