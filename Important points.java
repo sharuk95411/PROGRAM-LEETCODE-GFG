@@ -14,8 +14,8 @@ int a= 123;
 char [] chars = String.valueOf(a).toCharArray();
 8== Convert int to char ye javapoint se dekh lena kai variation btaye h wha pr
 9== isme Hme String di h and hme use each charcter ki freq k base pr asc order me sort krna h to wo hmne kia h phle hashamp se freq nikal li h then age ye kia h and ye
-yd rkhna importanat h
-PriorityQueue<Map.Entry<Character,Integer>>pq= new PriorityQueue<>( (a,b) -> b.getValue()-a.getValue());
+yd rkhna importanat h (347 isi concept based h but ye string wla 451 Q No h)
+PriorityQueue<Map.Entry<Character,Integer>>pq= new PriorityQueue<>( (a,b) -> b.getValue()-a.getValue()); // Yha PriorityQueue HashMap type ka h 
 for(Map.Entry<Character, Integer> entry: h.entrySet()) h is Object of HashMap
         {
             pq.offer(entry);
@@ -33,3 +33,4 @@ Arrays.sort(arr, (a, b) -> a[1] - b[1]);
    PriorityQueue<int[]> queue = new PriorityQueue<int[]>((a, b) -> a[0] - b[0]);
 15== arr.length gives the length of the no of rows in 2D array
 16== arr[0].length gives the length of no of columns of 2D array
+17== https://www.cs.usfca.edu/~galles/visualization/Heap.html Min Heap Visulization 
