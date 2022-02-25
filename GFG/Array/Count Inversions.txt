@@ -1,0 +1,68 @@
+// PreRequisit- Good knowlegde of merge sort and TYN 
+class Solution
+{
+
+    static long inversionCount(long arr[], long N)
+    {
+        int n= (int)N;
+        return devide(arr,0,n-1);
+        
+    }
+      
+    private static long devide(long arr[], int start,int end)
+    {
+        long count=0;
+        if(start<end)
+        {
+            int mid= start+(end-start)/2;
+            count+= devide(arr,start,mid);
+           count+= devide(arr,mid+1,end);
+           count+= add(arr,start,mid,end);
+        }
+        return count;
+    }  private static long add(long arr[],int left,int mid,int right)
+    {
+        long swap=0;
+        long temp[]= new long[right-left+1];
+        
+        int i=left;
+        int j= mid+1;
+        int index=0;
+        while(i<=mid && j<=right)
+        {
+            if(arr[i]>arr[j])
+            {
+                temp[index]= arr[j];
+                swap= swap+(mid+1-i);
+                j++;
+                index++;
+            }
+            else
+            {
+                temp[index]= arr[i];
+                i++;
+                index++;
+            }
+        }
+        while(j<=right)
+        {
+            temp[index]= arr[j];
+            j++;
+            index++;
+        }
+        while(i<=mid)
+        {
+            temp[index]= arr[i];
+            i++;
+            index++;
+        }
+       // System.out.println(Arrays.toString(temp));
+        
+        for( i=left;i<=right;i++)
+        {
+            arr[i]= temp[i-left];
+        }
+        return swap;
+        
+    }
+}

@@ -1,27 +1,33 @@
- // Isme sara data sorted form me h [0][0] se  end tak 
-    // logic self
-    
-    public boolean searchMatrix(int[][] matrix, int target) {
-        
-        for(int i=0;i<matrix.length;i++)
+        Khd se kia h mne without any help
+        int j= arr[0].length;
+        int row=-1;
+
+         // this loop to find the target element lie in which row
+        for(int i=0;i<arr.length;i++)
         {
-            int arr[]= matrix[i];
-             if(target>=arr[0] && target<=arr[arr.length-1])
-             {
-                 int start= 0;
-                 int end= arr.length-1;
-                     while(start<end)
-                     {
-                         int mid= start+(end-start)/2;
-                         
-                         if(target==arr[mid]) return  true;
-                         else if( target>arr[mid]) start= mid+1;
-                         else end=mid;
-                     }
-                 if(arr[start]==target) return true;// [[1]] ,target 1 ye is case k liye h
-                 return false;
-             }
+            if(arr[i][0]<=target && arr[i][j-1]>=target)
+            {
+                row= i;
+                break;
+            }
         }
-     
+        
+        // if target element out of range then 
+        if(row==-1) return false;
+        
+        
+        // Now use binary search 
+        int left=0,right= arr[0].length;
+        
+        while(left<=right)
+        {
+            int mid= left+(right-left)/2;
+            
+            if(arr[row][mid]==target) return true;
+            else if(arr[row][mid]>=target) right= mid-1;
+            else left= mid+1;
+        }
+        
+        // if element not present then simple return false;
         return false;
     }
